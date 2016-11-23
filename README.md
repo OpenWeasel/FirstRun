@@ -1,0 +1,2 @@
+# FirstRun
+openweasel first run.
