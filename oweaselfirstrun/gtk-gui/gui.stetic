@@ -8,7 +8,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/oweaselfirstrun.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="598 514">
+  <widget class="Gtk.Window" id="MainWindow" design-size="584 515">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -16,6 +16,7 @@
     <child>
       <widget class="Gtk.Fixed" id="fixed1">
         <property name="MemberName" />
+        <property name="WidthRequest">350</property>
         <property name="HasWindow">False</property>
         <child>
           <widget class="Gtk.Button" id="button2">
@@ -27,7 +28,7 @@
             <property name="UseUnderline">True</property>
           </widget>
           <packing>
-            <property name="X">440</property>
+            <property name="X">416</property>
             <property name="Y">463</property>
           </packing>
         </child>
@@ -261,6 +262,20 @@ END OF TERMS AND CONDITIONS</property>
           <packing>
             <property name="X">214</property>
             <property name="Y">6</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="button4">
+            <property name="MemberName" />
+            <property name="WidthRequest">138</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Decline</property>
+            <property name="UseUnderline">True</property>
+          </widget>
+          <packing>
+            <property name="X">36</property>
+            <property name="Y">463</property>
           </packing>
         </child>
       </widget>
