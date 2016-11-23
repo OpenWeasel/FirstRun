@@ -274,7 +274,7 @@ END OF TERMS AND CONDITIONS</property>
             <property name="UseUnderline">True</property>
           </widget>
           <packing>
-            <property name="X">32</property>
+            <property name="X">31</property>
             <property name="Y">463</property>
           </packing>
         </child>
