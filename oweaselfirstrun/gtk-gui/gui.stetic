@@ -19,13 +19,15 @@
         <property name="WidthRequest">350</property>
         <property name="HasWindow">False</property>
         <child>
-          <widget class="Gtk.Button" id="button2">
+          <widget class="Gtk.Button" id="acceptbt">
             <property name="MemberName" />
             <property name="WidthRequest">138</property>
             <property name="CanFocus">True</property>
+            <property name="Events">ButtonPressMask</property>
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Accept</property>
             <property name="UseUnderline">True</property>
+            <signal name="Released" handler="OnAcceptbtReleased" />
           </widget>
           <packing>
             <property name="X">416</property>
@@ -56,6 +58,7 @@
                 <property name="HeightRequest">406</property>
                 <property name="CanFocus">True</property>
                 <property name="ShowScrollbars">True</property>
+                <property name="Editable">False</property>
                 <property name="Overwrite">True</property>
                 <property name="Text" translatable="yes">GNU GENERAL PUBLIC LICENSE
 
@@ -246,6 +249,7 @@ IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY C
 If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.
 
 END OF TERMS AND CONDITIONS</property>
+                <property name="Justification">Center</property>
                 <property name="WrapMode">Word</property>
               </widget>
             </child>
@@ -265,13 +269,15 @@ END OF TERMS AND CONDITIONS</property>
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="button4">
+          <widget class="Gtk.Button" id="declinebt">
             <property name="MemberName" />
             <property name="WidthRequest">138</property>
             <property name="CanFocus">True</property>
+            <property name="Events">ButtonPressMask, ButtonReleaseMask, KeyPressMask, KeyReleaseMask</property>
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Decline</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnDeclinebtClicked" />
           </widget>
           <packing>
             <property name="X">32</property>
@@ -279,6 +285,14 @@ END OF TERMS AND CONDITIONS</property>
           </packing>
         </child>
       </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="oweaselfirstrun.Hostname" design-size="400 300">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Hostname</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <child>
+      <placeholder />
     </child>
   </widget>
 </stetic-interface>

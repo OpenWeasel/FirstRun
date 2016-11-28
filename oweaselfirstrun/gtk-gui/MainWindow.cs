@@ -4,7 +4,7 @@
 public partial class MainWindow {
 	private global::Gtk.Fixed fixed1;
 	
-	private global::Gtk.Button button2;
+	private global::Gtk.Button acceptbt;
 	
 	private global::Gtk.ScrolledWindow GtkScrolledWindow;
 	
@@ -12,7 +12,7 @@ public partial class MainWindow {
 	
 	private global::Gtk.Label label3;
 	
-	private global::Gtk.Button button4;
+	private global::Gtk.Button declinebt;
 	
 	protected virtual void Build() {
 		global::Stetic.Gui.Initialize(this);
@@ -26,14 +26,15 @@ public partial class MainWindow {
 		this.fixed1.Name = "fixed1";
 		this.fixed1.HasWindow = false;
 		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.button2 = new global::Gtk.Button();
-		this.button2.WidthRequest = 138;
-		this.button2.CanFocus = true;
-		this.button2.Name = "button2";
-		this.button2.UseUnderline = true;
-		this.button2.Label = global::Mono.Unix.Catalog.GetString("Accept");
-		this.fixed1.Add(this.button2);
-		global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.button2]));
+		this.acceptbt = new global::Gtk.Button();
+		this.acceptbt.WidthRequest = 138;
+		this.acceptbt.CanFocus = true;
+		this.acceptbt.Events = ((global::Gdk.EventMask)(256));
+		this.acceptbt.Name = "acceptbt";
+		this.acceptbt.UseUnderline = true;
+		this.acceptbt.Label = global::Mono.Unix.Catalog.GetString("Accept");
+		this.fixed1.Add(this.acceptbt);
+		global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.acceptbt]));
 		w1.X = 416;
 		w1.Y = 463;
 		// Container child fixed1.Gtk.Fixed+FixedChild
@@ -48,7 +49,9 @@ public partial class MainWindow {
 		this.textview2.HeightRequest = 406;
 		this.textview2.CanFocus = true;
 		this.textview2.Name = "textview2";
+		this.textview2.Editable = false;
 		this.textview2.Overwrite = true;
+		this.textview2.Justification = ((global::Gtk.Justification)(2));
 		this.textview2.WrapMode = ((global::Gtk.WrapMode)(2));
 		this.GtkScrolledWindow.Add(this.textview2);
 		this.fixed1.Add(this.GtkScrolledWindow);
@@ -63,15 +66,16 @@ public partial class MainWindow {
 		w4.X = 214;
 		w4.Y = 6;
 		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.button4 = new global::Gtk.Button();
-		this.button4.WidthRequest = 138;
-		this.button4.CanFocus = true;
-		this.button4.Name = "button4";
-		this.button4.UseUnderline = true;
-		this.button4.Label = global::Mono.Unix.Catalog.GetString("Decline");
-		this.fixed1.Add(this.button4);
-		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.button4]));
-		w5.X = 36;
+		this.declinebt = new global::Gtk.Button();
+		this.declinebt.WidthRequest = 138;
+		this.declinebt.CanFocus = true;
+		this.declinebt.Events = ((global::Gdk.EventMask)(3840));
+		this.declinebt.Name = "declinebt";
+		this.declinebt.UseUnderline = true;
+		this.declinebt.Label = global::Mono.Unix.Catalog.GetString("Decline");
+		this.fixed1.Add(this.declinebt);
+		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.declinebt]));
+		w5.X = 32;
 		w5.Y = 463;
 		this.Add(this.fixed1);
 		if ((this.Child != null)) {
@@ -81,5 +85,7 @@ public partial class MainWindow {
 		this.DefaultHeight = 515;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.acceptbt.Released += new global::System.EventHandler(this.OnAcceptbtReleased);
+		this.declinebt.Clicked += new global::System.EventHandler(this.OnDeclinebtClicked);
 	}
 }
