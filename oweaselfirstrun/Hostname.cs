@@ -18,12 +18,12 @@ namespace oweaselfirstrun
 		protected void OnOkbtReleased (object sender, EventArgs e)
 		{
 			String hostname = hostnameentry.Text;
-			String hostnamefile = File.ReadAllText("/home/warlock/documents/oweasel/oweaselfirstrun/oweaselfirstrun/bin/Debug/hostname");
-			String hostfile = File.ReadAllText("/home/warlock/documents/oweasel/oweaselfirstrun/oweaselfirstrun/bin/Debug/hosts");
+			String hostnamefile = File.ReadAllText("/etc/hostname");
+			String hostfile = File.ReadAllText("/etc/hosts");
 			hostfile = hostfile.Replace("shastaweasel", hostname);
 			hostnamefile = hostnamefile.Replace("shastaweasel", hostname);
-			File.WriteAllText("/home/warlock/documents/oweasel/oweaselfirstrun/oweaselfirstrun/bin/Debug/hostname", hostnamefile);
-			File.WriteAllText("/home/warlock/documents/oweasel/oweaselfirstrun/oweaselfirstrun/bin/Debug/hosts", hostfile);
+			File.WriteAllText("/etc/hostname", hostnamefile);
+			File.WriteAllText("/etc/hosts", hostfile);
 		}
 
 
