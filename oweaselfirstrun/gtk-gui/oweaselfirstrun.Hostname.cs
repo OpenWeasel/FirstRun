@@ -4,19 +4,71 @@ namespace oweaselfirstrun
 {
 	public partial class Hostname
 	{
+		private global::Gtk.Fixed fixed5;
+		private global::Gtk.Label label4;
+		private global::Gtk.Label label5;
+		private global::Gtk.Entry hostnameentry;
+		private global::Gtk.Button okbt;
+		
 		protected virtual void Build ()
 		{
 			global::Stetic.Gui.Initialize (this);
 			// Widget oweaselfirstrun.Hostname
+			this.WidthRequest = 350;
 			this.Name = "oweaselfirstrun.Hostname";
 			this.Title = global::Mono.Unix.Catalog.GetString ("Hostname");
-			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+			this.WindowPosition = ((global::Gtk.WindowPosition)(3));
+			// Container child oweaselfirstrun.Hostname.Gtk.Container+ContainerChild
+			this.fixed5 = new global::Gtk.Fixed ();
+			this.fixed5.Name = "fixed5";
+			this.fixed5.HasWindow = false;
+			// Container child fixed5.Gtk.Fixed+FixedChild
+			this.label4 = new global::Gtk.Label ();
+			this.label4.Name = "label4";
+			this.label4.LabelProp = global::Mono.Unix.Catalog.GetString ("Hostname Configuration");
+			this.fixed5.Add (this.label4);
+			global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed5 [this.label4]));
+			w1.X = 198;
+			w1.Y = 4;
+			// Container child fixed5.Gtk.Fixed+FixedChild
+			this.label5 = new global::Gtk.Label ();
+			this.label5.Name = "label5";
+			this.label5.LabelProp = global::Mono.Unix.Catalog.GetString ("Hostname:");
+			this.fixed5.Add (this.label5);
+			global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed5 [this.label5]));
+			w2.X = 49;
+			w2.Y = 57;
+			// Container child fixed5.Gtk.Fixed+FixedChild
+			this.hostnameentry = new global::Gtk.Entry ();
+			this.hostnameentry.CanFocus = true;
+			this.hostnameentry.Name = "hostnameentry";
+			this.hostnameentry.Text = global::Mono.Unix.Catalog.GetString ("shastaweasel");
+			this.hostnameentry.IsEditable = true;
+			this.hostnameentry.InvisibleChar = '●';
+			this.fixed5.Add (this.hostnameentry);
+			global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed5 [this.hostnameentry]));
+			w3.X = 114;
+			w3.Y = 53;
+			// Container child fixed5.Gtk.Fixed+FixedChild
+			this.okbt = new global::Gtk.Button ();
+			this.okbt.WidthRequest = 100;
+			this.okbt.CanFocus = true;
+			this.okbt.Name = "okbt";
+			this.okbt.UseUnderline = true;
+			this.okbt.Label = global::Mono.Unix.Catalog.GetString ("Ok");
+			this.fixed5.Add (this.okbt);
+			global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed5 [this.okbt]));
+			w4.X = 410;
+			w4.Y = 116;
+			this.Add (this.fixed5);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 400;
-			this.DefaultHeight = 300;
+			this.DefaultWidth = 536;
+			this.DefaultHeight = 166;
 			this.Show ();
+			this.hostnameentry.EditingDone += new global::System.EventHandler (this.OnHostnameentryEditingDone);
+			this.okbt.Released += new global::System.EventHandler (this.OnOkbtReleased);
 		}
 	}
 }

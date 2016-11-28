@@ -18,8 +18,9 @@ public partial class MainWindow {
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
 		this.Name = "MainWindow";
-		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
-		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.Title = global::Mono.Unix.Catalog.GetString("OpenWeasel Setup");
+		this.WindowPosition = ((global::Gtk.WindowPosition)(3));
+		this.Gravity = ((global::Gdk.Gravity)(5));
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.fixed1 = new global::Gtk.Fixed();
 		this.fixed1.WidthRequest = 350;

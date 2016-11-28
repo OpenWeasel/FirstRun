@@ -10,8 +10,9 @@
   </import>
   <widget class="Gtk.Window" id="MainWindow" design-size="584 515">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">MainWindow</property>
-    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Title" translatable="yes">OpenWeasel Setup</property>
+    <property name="WindowPosition">CenterAlways</property>
+    <property name="Gravity">Center</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.Fixed" id="fixed1">
@@ -287,12 +288,65 @@ END OF TERMS AND CONDITIONS</property>
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="oweaselfirstrun.Hostname" design-size="400 300">
+  <widget class="Gtk.Window" id="oweaselfirstrun.Hostname" design-size="536 166">
     <property name="MemberName" />
+    <property name="WidthRequest">350</property>
     <property name="Title" translatable="yes">Hostname</property>
-    <property name="WindowPosition">CenterOnParent</property>
+    <property name="WindowPosition">CenterAlways</property>
     <child>
-      <placeholder />
+      <widget class="Gtk.Fixed" id="fixed5">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Label" id="label4">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Hostname Configuration</property>
+          </widget>
+          <packing>
+            <property name="X">198</property>
+            <property name="Y">4</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label5">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Hostname:</property>
+          </widget>
+          <packing>
+            <property name="X">49</property>
+            <property name="Y">57</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="hostnameentry">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Text" translatable="yes">shastaweasel</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+            <signal name="EditingDone" handler="OnHostnameentryEditingDone" />
+          </widget>
+          <packing>
+            <property name="X">114</property>
+            <property name="Y">53</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="okbt">
+            <property name="MemberName" />
+            <property name="WidthRequest">100</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Ok</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Released" handler="OnOkbtReleased" />
+          </widget>
+          <packing>
+            <property name="X">410</property>
+            <property name="Y">116</property>
+          </packing>
+        </child>
+      </widget>
     </child>
   </widget>
 </stetic-interface>
