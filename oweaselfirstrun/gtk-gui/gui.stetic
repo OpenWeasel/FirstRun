@@ -291,7 +291,7 @@ END OF TERMS AND CONDITIONS</property>
   <widget class="Gtk.Window" id="oweaselfirstrun.Hostname" design-size="536 166">
     <property name="MemberName" />
     <property name="WidthRequest">350</property>
-    <property name="Title" translatable="yes">Hostname</property>
+    <property name="Title" translatable="yes">Hostname Configuration</property>
     <property name="WindowPosition">CenterAlways</property>
     <child>
       <widget class="Gtk.Fixed" id="fixed5">
@@ -308,13 +308,28 @@ END OF TERMS AND CONDITIONS</property>
           </packing>
         </child>
         <child>
+          <widget class="Gtk.Button" id="okbt">
+            <property name="MemberName" />
+            <property name="WidthRequest">100</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Ok</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Released" handler="OnOkbtReleased" />
+          </widget>
+          <packing>
+            <property name="X">410</property>
+            <property name="Y">116</property>
+          </packing>
+        </child>
+        <child>
           <widget class="Gtk.Label" id="label5">
             <property name="MemberName" />
             <property name="LabelProp" translatable="yes">Hostname:</property>
           </widget>
           <packing>
-            <property name="X">49</property>
-            <property name="Y">57</property>
+            <property name="X">16</property>
+            <property name="Y">74</property>
           </packing>
         </child>
         <child>
@@ -327,8 +342,54 @@ END OF TERMS AND CONDITIONS</property>
             <signal name="EditingDone" handler="OnHostnameentryEditingDone" />
           </widget>
           <packing>
-            <property name="X">114</property>
-            <property name="Y">53</property>
+            <property name="X">78</property>
+            <property name="Y">69</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="oweaselfirstrun.UpdateServer" design-size="536 166">
+    <property name="MemberName" />
+    <property name="WidthRequest">350</property>
+    <property name="Title" translatable="yes">Update Server Configuration</property>
+    <property name="WindowPosition">CenterAlways</property>
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Label" id="updateserverlabel">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Update Server Configuration</property>
+          </widget>
+          <packing>
+            <property name="X">181</property>
+            <property name="Y">5</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="updateserverlb">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Update Server Address:</property>
+          </widget>
+          <packing>
+            <property name="X">14</property>
+            <property name="Y">74</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="updateserveraddressentry">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Text" translatable="yes">weaseltestclient.kok.lan</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">●</property>
+            <signal name="EditingDone" handler="OnUpdateserveraddressentryEditingDone" />
+          </widget>
+          <packing>
+            <property name="X">155</property>
+            <property name="Y">70</property>
           </packing>
         </child>
         <child>
@@ -344,6 +405,42 @@ END OF TERMS AND CONDITIONS</property>
           <packing>
             <property name="X">410</property>
             <property name="Y">116</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="oweaselfirstrun.OpenWeaselCleanup" design-size="400 300">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">OpenWeaselCleanup</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <child>
+      <widget class="Gtk.Fixed" id="fixed2">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Label" id="label3">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Thank you for using OpenWeasel!</property>
+          </widget>
+          <packing>
+            <property name="X">104</property>
+            <property name="Y">65</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="closebt">
+            <property name="MemberName" />
+            <property name="WidthRequest">100</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Close</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Released" handler="OnClosebtReleased" />
+          </widget>
+          <packing>
+            <property name="X">148</property>
+            <property name="Y">157</property>
           </packing>
         </child>
       </widget>

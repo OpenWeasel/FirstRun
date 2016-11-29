@@ -24,6 +24,13 @@ namespace oweaselfirstrun
 			hostnamefile = hostnamefile.Replace("shastaweasel", hostname);
 			File.WriteAllText("/etc/hostname", hostnamefile);
 			File.WriteAllText("/etc/hosts", hostfile);
+		
+		
+			Visible = false;
+			Application.Init ();
+			oweaselfirstrun.UpdateServer win = new oweaselfirstrun.UpdateServer ();
+			win.Show ();
+			Application.Run ();
 		}
 
 

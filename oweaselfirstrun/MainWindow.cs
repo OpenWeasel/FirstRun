@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using Gtk;
 
 public partial class MainWindow: Gtk.Window
@@ -6,7 +7,7 @@ public partial class MainWindow: Gtk.Window
 	public MainWindow (): base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
-	
+
 	}
 	
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -17,7 +18,6 @@ public partial class MainWindow: Gtk.Window
 		protected void OnAcceptbtReleased (object sender, EventArgs e)
 	{
 		Visible = false;
-		//Application.Quit ();
 		Application.Init ();
 		oweaselfirstrun.Hostname win = new oweaselfirstrun.Hostname ();
 		win.Show ();
@@ -27,7 +27,8 @@ public partial class MainWindow: Gtk.Window
 	protected void OnAcceptbtClicked (object sender, EventArgs e)
 	{
 
-		Application.Quit ();
+		//Application.Quit ();
+
 
 	}	
 

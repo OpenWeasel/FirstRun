@@ -71,6 +71,10 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Hostname.cs" />
     <Compile Include="gtk-gui\oweaselfirstrun.Hostname.cs" />
+    <Compile Include="UpdateServer.cs" />
+    <Compile Include="gtk-gui\oweaselfirstrun.UpdateServer.cs" />
+    <Compile Include="OpenWeaselCleanup.cs" />
+    <Compile Include="gtk-gui\oweaselfirstrun.OpenWeaselCleanup.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
