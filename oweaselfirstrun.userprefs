@@ -1,13 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="oweaselfirstrun/app.desktop">
+  <MonoDevelop.Ide.Workbench ActiveDocument="oweaselfirstrun/MainWindow.cs">
     <Files>
       <File FileName="oweaselfirstrun/Main.cs" Line="13" Column="20" />
-      <File FileName="oweaselfirstrun/MainWindow.cs" Line="10" Column="3" />
+      <File FileName="oweaselfirstrun/MainWindow.cs" Line="17" Column="3" />
       <File FileName="oweaselfirstrun/app.desktop" />
-      <File FileName="oweaselfirstrun/Hostname.cs" Line="25" Column="32" />
       <File FileName="../../../../../etc/hosts" Line="1" Column="1" />
       <File FileName="../../../../../etc/hostname" Line="1" Column="1" />
+      <File FileName="oweaselfirstrun/Hostname.cs" Line="29" Column="1" />
+      <File FileName="oweaselfirstrun/UpdateServer.cs" Line="24" Column="60" />
+      <File FileName="../../../.gtkiw-2.sh" Line="17" Column="1" />
+      <File FileName="oweaselfirstrun/OpenWeaselCleanup.cs" Line="9" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
